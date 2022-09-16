@@ -20,8 +20,9 @@ Two datasets were provided to conduct this analysis.
 ### Statistical Results Analysis
 The statistical summary shows that with the five independent variables, the explanatory power of this multiple linear regression model is 71.49% (R-squared value), which means 71.49 % of the mpg(fuel efficiency) data can be explained by the five independent variables we passed to the linear model. The adjusted R-squared equals 0.6825 meaning some of the predictors do not contribute to the model's explanatory power. I will evaluate the relationship between each independent variable and dependent variable and determine if the independent variable is significant in the regression model. 
 
-![multiple linear regression]()
-The linear equation for this dataset is: 6.27*vehicle_length + 0.001*vehicle_weight + 0.07*spoiler_angle + 3.55*ground_clearance + (-3.41)*AWD + （-104）
+![multiple linear regression](https://github.com/Wuyang080510/MechaCar_Statistical_Analysis/blob/main/Images/ml%20regression%20summary.png)
+
+The linear equation for this dataset is: 6.27 * vehicle_length + 0.001 * vehicle_weight + 0.07 * spoiler_angle + 3.55 * ground_clearance + (-3.41) * AWD + （-104）
 
 Let’s have a look at the coefficients table in detail. 
 
@@ -46,18 +47,19 @@ The R-squared value is 0.7149 while the p-value is significant. We reject the nu
 
 ## Summary Statistics on Suspension Coils
 
-![Total Summary Table]()
-![Lot Summary Table]()
+![Total Summary Table](https://github.com/Wuyang080510/MechaCar_Statistical_Analysis/blob/main/Images/total%20summary.png)
+
+![Lot Summary Table](https://github.com/Wuyang080510/MechaCar_Statistical_Analysis/blob/main/Images/summary%20by%20lots.png)
+
 The design specifications for the MechaCar suspension coils dictate that the variance of the suspension coils must not exceed 100 pounds per square inch. 
 
 Lot 1 and lot 2 meet the design specification, but lot 3 did not meet the requirement as the variance of the suspension coil exceeds 100 pounds per square inch. The variance of the suspension coil is 170.29, significantly higher than the required limit. 
-
 
 ## T-Tests on Suspension Coils
 In this section, I conducted t-tests to compare the coil PSI mean to the population mean.
 First, I performed t-tests to determine if the coil PSI across all manufacturing lots is statistically different from the population mean of 1500 pounds per square inch. 
 
-![t-test for all lots]()
+![t-test for all lots](https://github.com/Wuyang080510/MechaCar_Statistical_Analysis/blob/main/Images/t-test%20for%20all%20lots.png)
 
 The significance level was set at 5%.
 P-value equals 0.06028, higher than 5% significance level. The sample coil PSI mean is 1498.78. The t-test result shows no statistical evidence that the coil PSI mean across all manufacturing lots is significantly different from the population mean of 1500 pounds per square inch. 
@@ -66,25 +68,28 @@ Then, I performed separate t-tests to compare the suspension coil PSI mean of ea
 
 For manufacturing lot 1, the lot 1 PSI mean is 1500.00. The calculated p-value is 1, significantly higher than the 5% significance level. We accept the null hypothesis. The coil PSI manufactured in lot 1 is not statistically different from the population mean of 1500 pounds per square inch. 
 
-![t-test for lot 1]()
+![t-test for lot 1](https://github.com/Wuyang080510/MechaCar_Statistical_Analysis/blob/main/Images/Lot%201.png)
 
 For manufacturing lot 2, the coil PSI mean is 1500.20. The p-value is 0.6072, significantly higher than the 5% significance level. We accept the null hypothesis that the PSI in lot 2 is not statistically different from the population mean of 1500 pounds per square inch. 
 
-![t-test for lot 2]()
+![t-test for lot 2](https://github.com/Wuyang080510/MechaCar_Statistical_Analysis/blob/main/Images/Lots%202.png)
 
 For manufacturing lot 3, the coil PSI mean is 1496.14. The calculated p-value is 0.042, lower than the 5% significance level. We reject the null hypothesis that the PSI in lot 3 is not statistically different from the population mean of 1500 pounds per square inch.
 
-![t-test for lot 3]()
+![t-test for lot 3](https://github.com/Wuyang080510/MechaCar_Statistical_Analysis/blob/main/Images/Lot%203.png)
 
 In summary, the coil manufactured in lot 1 and lot 2 follows the quality standard as the past orders. The manufacturing process is consistent across production lot 1 and lot 2. Coil manufactured in production lot 3 did not mean quality standard. Attention needs to be raised to examine the manufacturing process in lot 3. 
 
 ## Study Design: MechaCar vs Competition
 There are many factors a customer takes into consideration when purchasing a car. Two of the most essential features are fuel efficiency and safety rating.  In this section, I will perform a statistical study that compares MechaCar with its competitors. 
+
 ### Metrics to Test
 -	Fuel Efficiency (mpg)
 -	Safety Rating
+
 ### Hypothesis
 I will perform two hypothesis testing for this study. One is for fuel efficiency, and another one is for safety rating. 
+
 #### Hypothesis Testing for Fuel Efficiency
 H0: For the same type of Car in the same price range, the fuel efficiency of MechaCar is the same as competitors
 H1: For the same type of Car in the same price range, the fuel efficiency of MechaCar is different than the competitors
@@ -92,7 +97,9 @@ H1: For the same type of Car in the same price range, the fuel efficiency of Mec
 H0: For the same type of Car in the same price range, the safety rating of MechaCar is the same as competitors
 
 H1: For the same type of Car in the same price range, the safety rating of MechaCar is different than the competitors
+
 ### Test
 Two-sample t-test will be used to perform the study. T-test compares the mean of two samples and tests if there is a statistical difference between the two means. In our case, it would be if there is significant evidence showing that fuel efficiency between MechaCar and its competitors is different. And if there is significant evidence showing that the safety ratings between MechaCar and its competitors are different. 
+
 ### Data for the Test
 We would need to collect fuel efficiency (mpg) data and safety rating data from both MechaCars and the same type of cars in the same price range from its competitors. The sample should be randomly selected and as large as possible. 
